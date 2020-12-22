@@ -19,7 +19,15 @@ app.get("/make", function(req, res) {
 
 app.get("/view", function (req, res) {
     res.sendFile(path.join(__dirname, "wait.html"));
-})
+});
+
+app.get("/serve", function (req, res) {
+    return res.json(serve);
+});
+
+app.get("/wait", function (req, res) {
+    return res.json(wait);
+});
 
 // routes to post data
 app.post("/make", function(req, res) {
