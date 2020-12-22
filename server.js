@@ -19,6 +19,7 @@ app.get("/make", function(req, res) {
 
 app.get("/view", function (req, res) {
     res.sendFile(path.join(__dirname, "wait.html"));
+    res.json(serve); // this may not be needed, not sure how to get the data to the wait.html file though
 });
 
 app.get("/serve", function (req, res) {
@@ -35,11 +36,11 @@ app.post("/make", function(req, res) {
 
     if (serve.length < 5) {
         serve.push(newRes);
-        res.json(true)
+        res.json({ok: true}) // since json is an object best to do a key/value pair
     }
     else {
         wait.push(newRes);
-        res.json(false)
+        res.json({ok: false}) // needs to be consistant
     }
 });
 
