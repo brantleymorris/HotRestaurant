@@ -19,7 +19,6 @@ app.get("/make", function(req, res) {
 
 app.get("/view", function (req, res) {
     res.sendFile(path.join(__dirname, "wait.html"));
-    res.json(serve); // this may not be needed, not sure how to get the data to the wait.html file though
 });
 
 app.get("/serve", function (req, res) {
