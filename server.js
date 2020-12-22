@@ -32,3 +32,8 @@ app.post("/make", function(req, res) {
         wait.push(newRes);
     }
 })
+
+// starts server
+app.listen(PORT, function() {
+    console.log("App is listening on PORT " + PORT);
+});
