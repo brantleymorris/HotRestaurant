@@ -35,11 +35,13 @@ app.post("/make", function(req, res) {
 
     if (serve.length < 5) {
         serve.push(newRes);
+        res.json(true)
     }
     else {
         wait.push(newRes);
+        res.json(false)
     }
-})
+});
 
 // starts server
 app.listen(PORT, function() {
