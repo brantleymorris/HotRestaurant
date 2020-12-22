@@ -10,7 +10,7 @@ var wait = [];
 
 // routes to send pages
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
+    res.sendFile(path.join(__dirname, "view.html"));
 });
 
 app.get("/make", function(req, res) {
@@ -18,7 +18,7 @@ app.get("/make", function(req, res) {
 });
 
 app.get("/view", function (req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "wait.html"));
 })
 
 // routes to post data
